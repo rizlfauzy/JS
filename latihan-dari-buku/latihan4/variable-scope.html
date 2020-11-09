@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable Scope</title>
+  <script>
+    window.onload = function () {
+      let jenis_var = "Variable Global";
+      function deteksi_var() {
+        let jenis_var = "Variable Lokal";
+        let jenis_var_lokal = "Rizal Fauzi";
+        jenis_var_tak_tentu = "Tak Tahu Scope-nya";
+        console.log(jenis_var);
+      }
+
+      deteksi_var();
+      console.log(jenis_var);
+      console.log(jenis_var_tak_tentu);
+      console.log(jenis_var_lokal);
+      
+    }
+  </script>
+</head>
+<body>
+  <h1>Belajar Javascript</h1>
+  <p>Belajar Javascript Bareng Rizal Fauzi</p>
+</body>
+</html>
