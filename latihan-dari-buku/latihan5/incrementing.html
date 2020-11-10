@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incrementing</title>
+  <script>
+    window.onload = function () {
+      let hitung = 1;
+      let isi = document.getElementById("div_hitung").innerHTML = ++hitung;
+
+      document.getElementById("div_hitung_2").innerHTML = hitung++;
+      // Jika dikanan tanda tambahnya maka, angk awal akan ttp angka awal, jika di ++ lagi baru akan bertambah
+    }
+  </script>
+</head>
+<body>
+  <h1>Belajar Javascript</h1>
+  <p>Ayo pasti bisa</p>
+  <div id="div_hitung"></div>
+  <div id="div_hitung_2"></div>
+</body>
+</html>
