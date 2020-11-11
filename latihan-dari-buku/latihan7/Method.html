@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Method</title>
+  <script>
+    window.onload = function () {
+      let a = 2627.987654321;
+      let b = a.toExponential();
+      let c = a.toExponential(1);
+      // Menampilkan angka dalam bentuk scientific notation
+      // Yaitu tampilan angka 1 digit sebelum desimal dan diikuti dengan tanda pangkat.
+
+      console.log(b);
+      console.log(c);
+      console.log(a.toExponential(10));
+      console.log(a.toExponential(5));
+
+      let d = a.toFixed();
+      let e = a.toFixed(1);
+      let f = a.toFixed(5);
+      // Digunakan untuk membuat tampilan angka dengan jumlah
+      // desimal yang tetap (fixed)
+      
+      console.log(d);
+      console.log(e);
+      console.log(f);
+    }
+  </script>
+</head>
+<body>
+  <h1>Belajar Javascript</h1>
+  <p>Ayo Belajar barengg</p>
+</body>
+</html>
