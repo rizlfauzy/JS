@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Atau Method di String</title>
+  <script>
+    window.onload = function () {
+      let nama = "Rizal Fauzi Ganteng Banget sihhh";
+      console.log(nama.length);
+      // length digunakan untuk mengetahui panjang karakter 
+      // Di dalam sebuah string
+
+      console.log(nama.charAt(0));
+      // charAt() digunakan untuk mengambil sebah karakter
+      // dari string. method ini membutuhkan sebuah argumen
+      // dalam bentuk angka yang diisi dengan posisi karakter
+      // dalam string yang akan di ambil, dimulai dari angka
+      // 0 untuk karakter pertama dan seterusnya
+
+      console.log(nama.indexOf("l"));
+      console.log(nama.indexOf("Banget"));
+      // indexOf() digunakan untuk mencari karakter atau kata dalam sebuah string.
+      // Method ini membutuhkan dua buah argumen, yaitu 
+      // argumen bertipe string yang berisi karakter yang
+      // akan dicari dan sebuah argumen opsional yang
+      // yang berfungsi untuk menandai posisi awal pencarian
+      // Method ini menghasilkan nilai dalam bentuk posisi
+      // karakter yang ditemukan mulai dari 0 untuk posisi
+      // karakter pertama dan seterusnya.
+      // tapi apabila karakter tidak ditemukan maka nilai
+      // yang akan dihasilkan adalah -1.
+
+      console.log(nama.concat(" Parah Abis Itu mah"));
+      // concat("") digunakan untuk operasi penyambungan string. Method ini membutuhkan satu atau lebih argumen bertipe string yang akan disambung.
+
+      console.log(nama.replace("sihhh", "Ya Allah"));
+      // replace() digunakan untuk mencari string menggunakan
+      // regular expression dan menggant string tersebut
+      // dengan string lain. Method ini membutuhkan dua buah
+      // argumen, yaitu argumen awal dan string yang akan
+      // menggantikan argumen awal.
+    }
+  </script>
+</head>
+<body>
+  <h1>Belajar Javascript Bareng Yokk</h1>
+  <p>Hayooo jangan malas</p>
+</body>
+</html>
