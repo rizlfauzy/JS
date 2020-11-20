@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi</title>
+</head>
+<body>
+    <h1>Belajar Javascript Bareng Yok</h1>
+    <p>Hayuu mulai dari klik kanan, di inspect trs console dah</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+
+    <script>
+        let angka1 = "10";
+        let angka2 = 5;
+        let angka3 = true;
+        let hasil1 = angka1/angka2;
+        console.log(hasil1);
+        // Karena operatornya pembagian, tipe data string berubah jadi angka.
+
+        let hasil2 = angka1 + angka2;
+        console.log(hasil2);
+        // karena operatornya pertambahan, angka akan menjadi string, dan nilai variabel 1 dan lainnya akan digabungkan.
+
+        // Konversi menggunakan Fungsi Number()
+        function myFunction() {
+            var x1 = true;
+            var x2 = false;
+            var x3 = new Date();
+            var x4 = "999";
+            var x5 = "999 888";
+
+            var n = 
+            Number(x1) + "<br>" + 
+            Number(x2) + "<br>" + 
+            Number(x3) + "<br>" + 
+            Number(x4) + "<br>" + 
+            Number(x5);
+            document.getElementById("demo").innerHTML = n;
+        }
+        let hasil3 = Number(angka1)+angka2;
+        console.log(hasil3);
+        // Akan menghasilka nilai 15, karena string 10 jadi angka
+        let hasil4 = Number(angka3)+angka2;
+        console.log(hasil4);
+        // Akan jadi 6 karena boolean true akan menjadi angka 1
+
+        // Konversi Menggunakan parseInt() dan parseFloat()
+        let berat = "10.5 kilogram";
+        let jarak = "5.705 km";
+        let hasil5 = parseInt(berat);
+        // parseInt() digunakan untuk mengubah string menjadi angka dengan membuang angka dibelakang tanda titik, akan menghilangkan karakter lain selain angka.
+        console.log(hasil5);
+        let hasil6 = parseFloat(jarak);
+        // parseFloat() digunakan untuk mengubah string menjadi angka tanpa membuang angka dibelakang tanda titik, akan menghilangkan karakter lain selain angka
+        console.log(hasil6);
+
+        // Menggunakan String() untuk mengubah tipe data lain menjadi string
+        let angka = 10;
+        let kondisi = true;
+
+        let hasil7 = String(angka);
+        console.log(hasil7);
+        // akan menghasilkan "10"
+
+        let hasil8 = String(kondisi);
+        console.log(hasil8);
+
+        // Menggunakan Boolean() mengubah tipe data apa saja menjadi boolean
+        let teks = "Rizal";
+        let deret = [10,20,30];
+        let nol = 0;
+
+        let ubah1 = Boolean(angka);
+        console.log(ubah1);
+        // menghasilkan true
+        let ubah2 = Boolean(teks);
+        console.log(ubah2);
+        // menghasilkan true
+        let ubah3 = Boolean(deret);
+        console.log(ubah3);
+        // Menghasilkan true
+        let ubah4 = Boolean(nol);
+        console.log(ubah4);
+        // Menghasilkan false
+
+
+        // Menggunakan tyeof() memerlukan satu argumen yaitu nama variabelnya
+        let nama= "Rizal Fauzi";
+        let umur = 18;
+
+        let cek1 = typeof(nama);
+        console.log(cek1);
+        // menghasilkan string
+        let cek2 = typeof(umur);
+        console.log(cek2);
+    </script>
+</body>
+</html>

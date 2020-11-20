@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logika If</title>
+</head>
+<body>
+    <h1>Belajar javascript If dan Else</h1>
+    <p>Selamat belajar silahkan di buka consolenya</p>
+
+    <script>
+        // Kondisi didalam tanda kurung bisa diisi dengan variabel bertipe data boolean
+        // Atau dengan ekspresi yang akan menghasilkan nilai Boolean (true atau false)
+        // if (kondisi) {
+        //     // kode yang akan dijalankan jika kondisi true
+        // }
+        // else {
+        //     // kode yang akan dijalankan jika kondisi false 
+        // }
+
+        let usia = 18;
+        let usia_minimum = 17;
+        
+        if (usia >= usia_minimum) {
+            console.log("Anda Sudah Dewasa");
+        } else{
+            console.log("Anda Belum Dewasa");
+        }
+
+        // Nested If
+        // adalah struktur if bersarang yang secara harafiah artinya, struktur if di dalam struktur if lainnya.
+        // Programmer menggunakan nested if apabila logikayang hendak dipecahkan sangat kompleks
+        // Sebagai contoh jika menggunakan struktur if pertama, maka kita bisa tambahkan kondisi dimana user sudah bisa mengendarai kendaraan atau belum
+        // Jika sudah, maka layak mendapat SIM
+
+        let setir = true;
+
+        if (usia >= usia_minimum){
+            console.log("Anda Sudah Dewasa");
+            if (setir) {
+                console.log("Anda bisa dapat SIM");
+            } else{
+                console.log("Anda belum bisa dapat SIM");
+            }
+        } else{
+            console.log("Anda Belum Dewasa");
+        }
+
+        // Else If
+        // Struktur ini digunakan untuk mengecek kondisi yang cukup banyak jumlahnya dan masing - masing memiliki kode program yang akan dijalankan
+
+        let nilai = 70;
+        if (nilai == 70) {
+            console.log("Nilainya Lumayan");
+        } else if (nilai == 80) {
+            console.log("Nilainya Bagus");
+        } else if (nilai == 90) {
+            console.log("Nilainya Hebat");
+        } else if (nilai == 100) {
+            console.log("Nilainya Sempurna");
+        }
+    </script>
+</body>
+</html>
