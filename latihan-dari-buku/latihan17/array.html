@@ -64,6 +64,89 @@
     // Dari sini kita bisa mengakses elemen terakhir dengan
     // menulis seperti ini
     console.log(teman[teman.length - 1]);
+    
+    let pets = [
+      "Kucing",
+      "Anjing",
+      "Marmut"
+    ];
+    console.log(pets.length);
+    // Menghasilkan 3 sesuai dengan jumlah elemen
+
+    // Method push()
+    // Method ini akan menambahkan elemen baru ke dalam urutan terakhir pada array. Jadi anda tidak perlu mengetahui terlebih dahulu berapa jumlah elemen dalam sebuah array sebelum menambah elemen baru kedalamnya
+    pets.push("Kura - Kura");
+    pets.push("Kelinci");
+    pets.push("Ikan");
+
+    console.log(pets.length);
+    // Akan menghasilkan 6 karena sudah ditambahkan dengan 
+    // method push()
+
+    // Mengakses elemen terakhir array dengan cara
+    console.log(pets[pets.length - 1]);
+    // Menghasilkan ikan
+
+    // Method unshift()
+    // Digunakan untuk menambahkan elemen di bagian awal
+    // arrays, jadi dapat disimpulkan method ini merupakan kebalikan dari push()
+    console.log(pets[0]);
+    // Menghasilkan kucing
+    pets.unshift("Hamster");
+    console.log(pets[0]);
+    // Menghasilkan Hamster
+
+    // Method pop()
+    // Digunakan untuk menghapus elemen terakhir pada sebuah array. tidak hanya itu saja tapi juga menghasilkan nilai, yaitu elemen yang dihapus tersebut.
+    // Elemen itu akan dihapus begitu saja
+    // Elemen tersebut bisa disimpan kedalam variabel terpisah
+    // Elemen tersebut bisa dipindahkan ke bagian awal sebauh array
+
+    // Apabila ingin hanya menghapus elemen terakhir saja maka
+    let pets2 = [
+      "Kucing",
+      "Anjing",
+      "Marmut"
+    ]
+
+    console.log(pets2[pets2.length - 1]);
+    // Menghasilkan marmut
+
+    pets2.pop();
+
+    console.log(pets2[pets2.length - 1]);
+    // Menghasilkan Anjing karena sudah dihapus elemen terakhirnya
+
+    // Apabila ingin dipindahkan ke variabel terpisah maka
+    let pets3 = [
+      "Kucing",
+      "Anjing",
+      "Marmut"
+    ]
+
+    console.log(pets3[pets3.length - 1]);
+    // Menghasilkan marmut
+
+    let hewan = pets3.pop();
+
+    console.log(hewan);
+    // Menghasilkan Marmut
+    // Karena method pop() ini menyimpan elemen marmut
+
+    // Apabila ingin meletakkan elemen terakhir ke posisi pertama
+    let pets4 = [
+      "Kucing",
+      "Anjing",
+      "Marmut"
+    ];
+
+    console.log(pets4[0]);
+    // Menghasilkan Kucing
+
+    pets4.unshift(pets4.pop());
+    
+    console.log(pets4[0]);
+    // Menghasilkan Marmut
   </script>
 </body>
 </html>
