@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perulangan For</title>
+</head>
+<body>
+  <h1>Hayuu Kita Belajar Bareng</h1>
+  <p>Di Console ya teman - teman liatnya</p>
+
+  <script>
+    //for (kondisi_awal, Kondisi_akhir, kenaikan) {
+        // baris program yang akan diulang
+    // }
+    
+
+    for (let i = 1; i <= 10; i++) {
+      console.log(i);   
+    }
+
+    // Bisa untuk mengakses seluruh file di array
+    let hewan = [
+      "Kucing",
+      "Ikan",
+      "Anjing",
+      "Semut",
+      "Bebek",
+      "Ayam",
+      "Burung",
+      "Marmut",
+      "Hamster"
+    ];
+
+    for (let i = 0; i < hewan.length; i++) {
+      console.log("Aku punya hewan: " + hewan[i]);
+      
+    }
+
+    // Break digunakan untuk menghentikan blok kode program
+    // meskipun sejatinya belum ditemukan kondisi untuk berhenti
+    for (let i = 0; i <= 10; i++) {
+      if (i == 5) {
+        break;
+        // Hasil akan berhenti di 5 karena di break di kondisi
+        // tersebut
+      }  
+      console.log(i);
+    }
+  </script>
+</body>
+</html>

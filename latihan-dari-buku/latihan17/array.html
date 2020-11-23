@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+</head>
+<body>
+  <h1>Belajar Javascript yokk</h1>
+  <p>Array nih ya yg hari ini kita bahas</p>
+
+  <script>
+    let temansekelas = [
+      "Joni Gudel",
+      "Soni Tulung",
+      "Edi Yunani",
+      "Mimin Item",
+      "Edward Beki",
+      "Koh Acong"
+    ];
+    // Dibuat dengan menggunakan kurung siku
+    // dan setiap elemennya dipisahkan dengan tanda koma
+    // setiap elemen dwakili dengan nomor index
+    // nomor index dimulai dengan nomor 0
+    console.log(temansekelas[0]);
+
+
+    // cara menambahkan elemen array saat variabelnya
+    // sudah dibuat
+    temansekelas[6] = "Alti Bewok";
+    console.log(temansekelas[ 6]);
+
+    // Mencampur tipe data ke dalam array
+    let teman = [
+      9,
+      "Joni Gudel",
+      "Soni Tulung",
+      "Edi Yunani",
+      "Mimin Item",
+      "Edward Beki",
+      "Koh Acong",
+      [ 
+        "Alti Brewok",
+        "Suharso",
+        "Yoyok"
+      ]
+    ];
+    // Didalam array bisa diisi dengan array lagi
+
+    // Cara mengakses array di dalam array nya adalah sebagai berikut
+    // contoh kita akan mengakses yoyok
+    // maka caranya sebagai berikut
+    console.log(teman[7][2]);
+
+    // Property dan methods untuk array
+
+    // length
+    console.log(temansekelas.length);
+    // Apabila ada array didalam sebuah array, maka itu
+    // diitungnya sebagai satu elmen
+    // nomor index untuk tiap elemen diawali dengan angka 0
+    // Oleh karena itu, apabila jumlah seluruh elemen adalah 
+    // 8 maka elemen terakhir diberi nomor index 7
+    // Dari sini kita bisa mengakses elemen terakhir dengan
+    // menulis seperti ini
+    console.log(teman[teman.length - 1]);
+  </script>
+</body>
+</html>
