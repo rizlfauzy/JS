@@ -28,7 +28,7 @@
     // cara menambahkan elemen array saat variabelnya
     // sudah dibuat
     temansekelas[6] = "Alti Bewok";
-    console.log(temansekelas[ 6]);
+    console.log(temansekelas[6]);
 
     // Mencampur tipe data ke dalam array
     let teman = [
@@ -147,6 +147,64 @@
     
     console.log(pets4[0]);
     // Menghasilkan Marmut
+
+    // Method Shift
+    // Merupakan kebalikan dari method pop()
+    // Tapi yang dihapus adalah elemen pertama dari array
+    // Dan menghasilkan nilai balikan yaitu berupa nilai pertama itu sediri
+
+    let pets5 =[
+      "kucing",
+      "anjing",
+      "marmut"
+    ]
+
+    console.log(pets5[pets5.length - 1]);
+    // Menghasilkan Marmut
+
+    pets5.push(pets5.shift());
+    // Menghapus kucing dan memindahkannya ke elemen terakhir
+
+    console.log(pets5[pets5.length - 1]);
+    // Sekarang menghasilkan kucing
+
+    // Method concat
+    // dipakai untuk menggabungkan dua array
+    // arraypertama.concat(arraykedua);
+    let pets6 = [
+      "kucing",
+      "anjing",
+      "marmut"
+    ]
+
+    let flowers = [
+      "melati",
+      "mawar",
+      "anggrek"
+    ]
+
+    console.log(pets6.concat(flowers));
+    // Selain menggabungkan 2 array
+    // concat() juga bisa menggabungkan 3 array
+
+    // method join()
+    // digunakan untuk menggabngkan seluruh elemen
+    // menjadi sebuah string
+    let flowers2 = [
+      "melati",
+      "mawar",
+      "anggrek"
+    ];
+
+    console.log(flowers2.join());
+    // akan menghsilkan "melati, mawar, anggrek"
+    // tanda koma akan menjadi tanda pemisah default
+    // Kita bisa mengisi argumen di dalam method join untuk dijadikan tanda pemisah
+
+    console.log(flowers2.join("-"));
+    // akan menjadikan - sebagai tanda pemisah
+
+    
   </script>
 </body>
 </html>
