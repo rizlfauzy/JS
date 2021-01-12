@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Object</title>
+</head>
+<body> 
+  <h1>Belajar Javascript Lagi Hyung</h1>
+  <p>Kali ini kita akan belajar object yuk hyung</p>
+
+
+  <script>
+    // Object hampir mirip dengan array
+    // yang membedakannya adalah 
+    // pada array setiap elemen dilengkapi dengan nomor indeks
+    // Sedangkan pada objects, setiap elemen ditandai dengan string(teks)
+    // yang kemudian dikenal dikenal dengan istilah keys
+    // elemennya disebut value
+    // contoh penulisan object
+    let sapi = {
+      kaki : 4,
+      nama : "Si Sapi",
+      warna : "Putih"
+    };
+    // Key selalu bebentuk string
+    // Sedangkan valuenya bisa berbentuk apa aja
+    // Setiap pasangan key-value dipisahkan tanda koma
+    // Key tidak selalu harus ditulis dengan kutip dua
+    // Kecuali key yang menggunakan dua kata
+
+    // Mengakses nilai di dalam objek
+    // menggunakan tanda kurung siku
+    console.log(sapi["nama"]);
+    // Menggunakan dot notation
+    console.log(sapi.warna);
+
+    // Menampilkan seluruh keys pada object
+    // Untuk menampilkan seluruh nama key dalam object dengan menggunakan
+    console.log(Object.keys(sapi));
+
+    // Menambahkan nilai kedalam object
+    // Kita bisa membuat sebuah object kosong yaitu dengan
+    let kucing = {};
+    // Javascript hanya akan membuat object baru dengan nama kucing, tanpa dilengkapi dengan key-value
+    // Untuk menambahkan key-value anda bisa menggunakan cara berikut
+    kucing["nama"] = "Shiro";
+    kucing["warna"] = "Putih";
+    kucing["Kaki"] = 4;
+    console.log(Object.keys(kucing));
+
+    let kucing2 = {};
+    kucing2.nama = "Enzi";
+    kucing2.warna = "Hitam";
+    kucing2.kaki = 4;
+    console.log(Object.keys(kucing2));
+
+    // Kombinasi Array dan Object
+    let jenisKucing = [
+      {"nama" : "Si Empus", "Jenis" : "Persia"},
+      {"nama" : "Si Miauw", "Jenis" : "Siam"},
+      {"nama" : "Si Cakar", "Jenis" : "Russian Blue"}
+    ];
+    console.log(jenisKucing[0].nama);
+
+    // Array Di dalam object
+    let joni = {
+      nama : "Joni",
+      usia : 17,
+      "music fav" : ["pop","rock","dangdut"]
+    };
+
+    let edi = {
+      nama : "Edi",
+      usia : 20,
+      "music fav" : ["reggae","punk","gamelan"]
+    };
+    // Selanjutnya kedua object di atas bisa dijadikan elemen pada array yang berbeda
+    // Sebagai contoh kita membuat array baru yang isi elemennya adalah nama - nama object tersebut
+    // Contoh sebagai berikut
+    let teman = [joni, edi];
+    // Jika kita menulis teman[0] maka pasangan key-value pada object joni akan dapat diakses.
+    console.log(teman[0]);
+  </script>
+</body>
+</html>

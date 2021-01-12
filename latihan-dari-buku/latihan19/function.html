@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Okeee ayoo kita mulai lagi belajar Javascriptnya</h1>
+  <p>Seperti biasa liat  di console ya</p>
+
+<script>
+// Contoh pembuatan function
+function halo() {
+  console.log("Selamat Pagi");
+  console.log("Apa Kabar");
+  console.log("Belajar Javascript yuk!");
+}
+// Perintah harus ditulis di dalam tanda kurung kurawa
+
+let halo2 = function (){
+  console.log("Apa Kabar ??");
+  console.log("Belajar Javascript lagi yuk !!");
+}
+// Ini disebut anonymous function
+// Karena tidak memiliki nama
+// Dikarenakan disimpan di dalam sebua variabel
+
+// Cara untuk melakukan pemanggilannya bisa dengan menggunakan cara berikut
+halo() //nama function dilanjutkan dengan ()
+
+// Penggunaan argumen di dalam sebuah function
+function persegi(sisi) {
+  console.log("Luas Persegi adalah = " + sisi * sisi);
+}
+// Penggunaan argumen agar user lain nnti dapat mengganti nilainya dengan yang lain
+persegi(6)
+
+// Menggunakan dua argumen
+function persegiPanjang(panjang, lebar) {
+  console.log("Luas Persegi Panjang adalahh = " + panjang * lebar);
+}
+persegiPanjang(12, 6);
+
+// Argumen default
+function halo3(nama = "Joni") {
+  console.log("Halo : " + nama);
+}
+halo3();
+// ketika dipanggil dan tanpa argumen maka yang akan keluar adalah argumen defaultnya yaitu "Joni"
+
+halo3("Rizal");
+//berbeda ketika kita mendefinisikan argumennya lagi
+
+// Menggunakan kata kunci return
+// dengan menggunakan return kita bisa langsung mendapatkan hasil yang diinginkan
+function luaspersegipanjang(panjang, lebar) {
+  return "Luas Persegi Panjang adalah : " + panjang * lebar
+}
+// tapi dalam penerapannya kita diharuskan untuk log lagi saat pemanggilannya agar hasilnya bisa nampak di web
+console.log(luaspersegipanjang(5,6));
+
+// menggunakan kondisional if
+function luaspersegi(sisi) {
+  luas = "Luas Persegi = "
+  if (typeof sisi=="string") {
+    return "Argumen harus angka";
+  }
+  return luas + sisi * sisi;
+}
+console.log(luaspersegi("5"));
+console.log(luaspersegi(5));
+// Jika terdapat tanda kutip maka yang akan keluar adalah pernyataan bahwa itu adalah sebuah string
+
+// Anonymous function di dalam object
+// Anonymous functionnya digunakan di dalam key - value object
+let hari = {
+  namahari : "Senin",
+  namabulan : "Agustus",
+  waktu : function()
+    {
+      return "Siang";
+    }
+};
+console.log(hari.namahari);
+console.log(hari.waktu());
+
+// Mengenal Method
+// Method adalah function yang dibuat di dalam object
+let hari2 = {
+  namahari : "Senin",
+  namabulan : "Agustus",
+  waktu : function()
+    {
+      let d = new Date();
+      // new Date() digunakan untuk mengambil tanggal di database javascript
+      let jam = d.getHours();
+      
+      if (jam >= 8 && jam < 12) {
+        return "Jam " + jam + " Pagi Hari";
+      }
+      else if (jam >= 12 && jam <= 18){
+        return "Jam " + jam + " Sore Hari";
+      }
+      else if (jam > 18 && jam <= 24){
+        return "Jam " + jam + " Malam Hari";
+      }
+      else {
+        return "Waktu tidak tersedia"
+      }
+    }
+};
+console.log(hari2.waktu());
+
+// Cara lain membuat methods
+// Menggunakan Arrow Notation
+let halo4 = () => { return "Hello Apa Kabar"};
+console.log(halo4());
+// Tidak perlu menggunakan kata function
+// Dan digantikan dengan =>
+let luaspersegi2 = (sisi) => { return "Luas Persegi adalah = " + sisi * sisi};
+console.log(luaspersegi2(20));
+
+// Menggunakan this
+// Digunakan dalam pembuatan method yang merujuk pada salah satu key atau property didalam object dimana method itu dibuat
+let kucing = {
+  nama : "Si Empuss",
+  kaki : 4,
+  warna : "Oranye Blonteng",
+  halo : function(){
+    return "halo namaku : " + this.nama;
+    // this digunakan untuk mengganti penulisan kucing
+  }
+}
+console.log(kucing.halo());
+
+// Closure
+// Adalah function di dalam function
+function perkalian(a){
+  let angka = a;
+  return function(b){
+    return angka * b;
+  }
+}
+let matematika = perkalian(8);
+// closure pada dasarnya adalah function yang mereturn funtion lainnya
+// Angka 8 akan disimpan di dalam memori
+// dan akan bisa diakses sebagai variabel angka di function(b)
+// lalu let matematika akan menjadi nama function dari function b
+console.log(matematika(8));
+</script>  
+</body>
+</html>
