@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengulangan</title>
+</head>
+<body>
+  <h1>Latihan Pengulangan Angkot</h1>
+  <p class="angkot"></p>
+
+  <script>
+    let p = document.querySelector(".angkot");
+    let angkot = 10;
+    let beroperasi = 8;
+
+    for(i = 1;i <= beroperasi; i++){
+      console.log("angkot No " + i + " Beroperasi dengan baik");
+      p.innerHTML = "Angkot No " + i + " Beroperasi dengan baik";
+    }
+    for(i = beroperasi+1;i <=angkot;i++){
+      console.log("angkot No " + i + " Sedang Rusak");
+    }
+  </script>
+</body>
+</html>
