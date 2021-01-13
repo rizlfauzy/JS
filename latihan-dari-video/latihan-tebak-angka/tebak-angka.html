@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak Angka</title>
+</head>
+
+<body>
+  <p>Hayoo ditebak angka berapa :)</p>
+
+  <script>
+    alert("Tebak Angka 1 - 10 \nSilahkan masukkan tebakan kamu")
+    let acak = Math.round(Math.random() * 9) + 1;
+    let kesempatan = 3;
+    let tanya = true;
+
+    while (tanya) {
+      for (let i = 1; i <= kesempatan; i++) {
+        let p = parseInt(prompt("Masukkan Angka Tebakan Kamu : "));
+        let h = 3;
+
+        if (p < acak) {
+          h = h - i;
+          alert(" Terlalu Rendah, Sisa " + h);
+        } else if (p > acak) {
+          h = h - i;
+          alert(" Terlalu Tinggi, Sisa " + h);
+        } else {
+          alert(" Selamat Tebakan anda benar \nAngka yang dimaksud adalah : " + acak);
+          i = 4;
+        }
+      }
+      tanya = confirm("Mau main lagi ? ");
+    }
+  </script>
+</body>
+
+</html>

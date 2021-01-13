@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Suwit</title>
+</head>
+<body>
+  <h1>Hayo Game Suwit buat Salsa nih wkwkwk</h1>
+<script>
+  tanya = true;
+  while(tanya){
+    let p = prompt("Pilih : Gajah , Semut , Orang ");
+
+    let comp = Math.random();
+    if(comp < 0.34){
+      comp = "Gajah";
+    }else if(comp >= 0.34 && comp < 0.67){
+      comp = "Orang";
+    }else {
+      comp = "Semut"
+    };
+
+    let hasil = "";
+    if (p == comp){
+      hasil = "SERI !";
+    }else if(p == "Gajah"){
+      if(comp == "Orang"){
+        hasil = "MENANG !";
+      }
+      else {
+        hasil = "KALAH !";
+      }
+    }else if(p == "Orang"){
+      if(comp == "Gajah"){
+        hasil = "KALAH !";
+      }
+      else {
+        hasil = "MENANG !";
+      }
+    }else if(p == "Semut"){
+      if(comp == "Gajah"){
+        hasil = "MENANG !";
+      }
+      else{
+        hasil = "KALAH !";
+      }
+    }else {
+      hasil = "Salah Memasukkan Input Data Woii";
+    }
+
+    alert("Kamu memilih : " + p + " dan Komputer memilih : " + comp + "\nMaka kamu " + hasil);
+
+    tanya = confirm("Lagi ?");
+  }
+  alert("Terima Kasih sudah bermain");
+</script>
+</body>
+</html>
