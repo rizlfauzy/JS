@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slice dan Splice</title>
+</head>
+<body>
+  <h1>Penggunaan Splice dan Slice</h1>
+
+  <script>
+    let arr = ["Rizal", "Fauzi", "Ganteng", "Banget"]
+    // splice digunakan untuk menaruh elemen di tengah array
+    arr.splice(2,0,"anaknya");
+    // arr.splice(indeksYangAkanDiisi,jumlahIndeksYangAkanDihapus,isiIndeks)
+    console.log(arr.join(" - "));
+
+    let arr2 = ["Rizal", "Fauzi", "Pinter", "Banget"];
+    // slice digunakan untuk mengambil isi ditengah array, tanpa menghapus isi array tersebut
+    let arr3 = arr2.slice(1,3);
+    // arr3 = arr2.slice(awalIndeksYangInginDiambil, AkhiranIndeksDikurangSatuDariYangMauDiambil)
+    console.log(arr3.join( " - " ));
+
+    
+  </script>
+</body>
+</html>

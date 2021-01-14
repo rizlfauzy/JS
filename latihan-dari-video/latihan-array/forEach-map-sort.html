@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forEach dan map</title>
+</head>
+<body>
+  <p>forEach ,sort dan map</p>
+  <p>Sama - sama digunakan untuk melakukan pengulangan</p>
+  <p>Tapi lebih dicocokan dengan array</p>
+  <p>Sort mengurutkan isi array</p>
+
+  <script>
+    let arr = [1,2,6,3,9,5,4,7];
+    arr.forEach(function(e, i){
+      console.log("Angka ke " + (i+1) + " adalah : " + e);
+    });
+    // Untuk forEach tidak menghasilkan nilai lagi
+    // arr.forEach(function(elemen, index){ console.log(e) });
+
+    let arr2 = arr.map(function(e, i){
+      return e * 2;
+    });
+    // Untuk map menghasilkan nilai balikan lagi berupa array yang baru kita ubah
+    // arr2 = arr.map(function(elemen, index){ return e * 2 });
+    console.log(arr2.join( " - " ));
+
+    arr.sort();
+    // Mengurutkan isi array
+    console.log(arr.join(" - "));
+    // Namun jika terdapat angka 10 atau puluhan maka
+    arr2.sort(function(a,b){
+      return a-b;
+    });
+    // Harus memakai function didalamnya sebagai perbandingan
+    // arr2.sort(function(a,b){return a-b});
+    console.log(arr2.join(" - "));
+  </script>
+</body>
+</html>

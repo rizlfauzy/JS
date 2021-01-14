@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volume</title>
+</head>
+
+<body>
+  <h1>Menghitung Jumlah 2 Volume Kubus</h1>
+
+  <script>
+    let p = parseInt(prompt("Masukkan Angka Kubus Pertama"));
+    let b = parseInt(prompt("Masukkan Angka Kubus Kedua"));
+
+    function menghitungKubus(p, b) {
+
+
+      let kubus1 = p * p * p;
+      let kubus2 = b * b * b;
+
+      return kubus1 + kubus2;
+    }
+
+    alert(menghitungKubus(p, b));
+  </script>
+</body>
+
+</html>
