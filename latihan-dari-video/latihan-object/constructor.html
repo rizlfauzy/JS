@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructor</title>
+</head>
+<body>
+  <p>Constructor adalah function yang dibuat khusus untuk membuat object</p>
+
+  <script>
+    function Siswa(nama, nik, alamat){
+      this.nama = nama;
+      this.nik = nik;
+      this.alamat = alamat;
+    }
+    let nama = prompt("Nama Anda : ");
+    let nik = parseInt(prompt("Nomor nik Anda : "));
+    let alamat = prompt("Alamat Anda : ");
+
+    let siswa2 = new Siswa(nama, nik, alamat);
+    alert(JSON.stringify(siswa2));
+  </script>
+</body>
+</html>

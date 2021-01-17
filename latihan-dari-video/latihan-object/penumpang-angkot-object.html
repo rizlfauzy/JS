@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penumpang Angkot Object</title>
+</head>
+<body>
+  <p>Penerapan Object dalam Latihan Angkot</p>
+
+  <script>
+   function angkot(supir, trayek, penumpang, kas){
+      this.supir = supir;
+      this.trayek = trayek;
+      this.penumpang = penumpang;
+      this.kas = kas;
+
+      this.penumpangNaik = function(namaPenumpang){
+        this.penumpang.push(namaPenumpang);
+        return this.penumpang.join(" dan ");
+        for(let i = 0;i < this.penumpang.length; i++){
+          if(this.penumpang[i] == undefined){
+            this.penumpang[i] = namaPenumpang;
+            return this.penumpang;
+          }
+        }
+      };
+
+      this.penumpangTurun = function(namaPenumpang, bayar){
+        if(this.penumpang.length === 0){
+          alert("Penumpang masih Kosong");
+          return false;
+        }
+        for(let i = 0; i < this.penumpang.length; i++){
+          if(this.penumpang[i] == namaPenumpang){
+            this.penumpang[i] = undefined;
+            this.kas += bayar;
+            alert(namaPenumpang + " Telah turun, dan sudah membayar sebesar " + angkot1.kas);
+            return this.penumpang.join(" - ");
+          }else if (i == this.penumpang.length - 1){
+            alert("Penumpang dengan nama " + namaPenumpang + " tidak ada di dalam angkot");
+            return this.penumpang;
+          }
+        }
+      }
+    }
+
+    let angkot1 = new angkot("Rizal Fauzi", ["Paseban", "Rawasari"], [], 0 );
+    let angkot2 = new angkot("Salsa Carenea", ["Pasar Minggu", "Lenteng Agung"], [], 0);
+
+    let naik = confirm("Ada yang mau naik Angkot ?");
+    while(naik == true){
+      let penumpang1 = prompt("Nama penumpang yang naik : ");
+      alert(angkot1.penumpangNaik(penumpang1) + " telah naik");
+
+      if(angkot1.penumpang.length > 0){
+        let turun = confirm("Ada yang mau turun ?");
+        if(turun == true){
+          let sampai = prompt("Nama penumpang yang turun : ");
+          let bayar1 = parseInt(prompt("Bayar minimal 2500 : "));
+          angkot1.penumpangTurun(sampai, bayar1);
+        }else{
+          naik = confirm("Ada yang mau naik lagi ?");
+        }
+      }
+    }
+  </script>
+</body>
+</html>

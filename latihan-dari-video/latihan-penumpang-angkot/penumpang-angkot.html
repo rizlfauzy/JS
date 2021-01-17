@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penumpang Angkot</title>
+</head>
+
+<body>
+  <p>Latihan Membuat Program Penumpang Angkot</p>
+
+  <script>
+    let penumpang = [];
+
+    let tambahPenumpang = function (namaPenumpang, penumpang) {
+      if (penumpang.length == 0) {
+        penumpang.push(namaPenumpang);
+        return penumpang.join(" - ");
+      }
+
+      for (let i = 0; i < penumpang.length; i++) {
+        if (penumpang[i] == undefined) {
+          penumpang[i] = namaPenumpang;
+          return penumpang.join(" - ");
+        } else if (penumpang[i] == namaPenumpang) {
+          alert("Nama penumpang " + namaPenumpang + " sudah di dalam angkot");
+          return penumpang.join(" - ");
+        } else if (i == penumpang.length - 1) {
+          penumpang.push(namaPenumpang);
+          return penumpang.join(" - ");
+        }
+      }
+    };
+
+    let hapusPenumpang = function (namaPenumpang, penumpang) {
+      if (penumpang.length == 0) {
+        alert("Angkot masih kosong");
+        return penumpang.join(" - ");
+      }
+
+      for (let i = 0; i < penumpang.length; i++) {
+        if (penumpang[i] == namaPenumpang) {
+          penumpang[i] = undefined;
+          return penumpang.join(" - ");
+        } else if (i == penumpang.length - 1) {
+          alert("Penumpang dengan nama " + namaPenumpang + " tersebut tidak ada diangkot");
+          return penumpang.join(" - ");
+        }
+      }
+    }
+
+    let naik = true;
+    while (naik) {
+      let isiNaik = prompt("Masukkan Nama Penumpang : ");
+      alert("Anda telah naik angkot kami, selamat menikmati perjalanan anda " + tambahPenumpang(isiNaik, penumpang));
+
+      let turun = confirm("Ada yang mau turun ?");
+      if (turun == true) {
+        let isiTurun = prompt("Isi nama penumpang yang ingin turun : ");
+        hapusPenumpang(isiTurun, penumpang);
+        
+      }
+      naik = confirm("Ada yang mau naik lagi? ");
+    }
+  </script>
+</body>
+
+</html>

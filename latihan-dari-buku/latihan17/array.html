@@ -82,6 +82,11 @@
     console.log(pets.length);
     // Akan menghasilkan 6 karena sudah ditambahkan dengan 
     // method push()
+    const arr = [2,4,6];
+    arr.push(arr.push(arr.pop()));
+    // Hasilnya [2,4,6,3]
+    // arr.push mengembalikan length array
+    console.log(arr);
 
     // Mengakses elemen terakhir array dengan cara
     console.log(pets[pets.length - 1]);

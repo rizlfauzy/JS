@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter dan Find</title>
+</head>
+<body>
+  <p>Filter untuk mencari banyak nilai karena bisa mengembalikan banyak nilai sekaligus serta menghasilkan nilai array lagi</p>
+  <p>Sedangkan Find hanya bisa mengembalikan satu nilai saja dan tidak menghasilkan array kembali</p>
+
+  <script>
+    let angka = [1,2,6,3,9,5,4,7];
+    let angka2 = angka.filter(function(e){
+      return e > 5;
+    });
+    console.log(angka2.join(" - "));
+    //Filter Akan menghasilkan nilai balikan berupa array
+    let numbers = [1,5,4,1,5];
+    let removeDuplicates = numbers.filter(function(e,i){
+      return numbers.indexOf(e) === i;
+      // numbers.indexOf(e) === i; akan membuat indexOf(e) menghasilkan index dari element tersebut
+      // karena angka 1 sudah diindexkan 0 dan hanya memunculkan yang sama dengan i
+      // Maka saat ada angka 1 lagi yang indexnya beda, akan kalah dengan index yang sudah didefinisikan sebelumnya
+    });
+    console.log(removeDuplicates.join(" - "));
+    // Untuk mengapus duplikat
+
+    let angka3 = angka.sort(function(a,b){
+      return a-b;
+    })
+
+    let angka4 = angka3.find(function(e){
+      return e > 6;
+    });
+    console.log(angka4);
+    // tidak bisa memakai join()
+    // dikarenakan tidak mengembalikan sebuah array
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Intro</title>
+</head>
+<body>
+  <p>Contoh penggunaan object</p>
+  <script>
+    let mahasiswa = {
+      nama : "Rizal Fauzi",
+      lulus : true,
+      IPSemester : [2.90,3.10,3.25,2.88,3.04],
+      IPKumulatif : function() {
+        let total = 0;
+        let ips = this.IPSemester;
+        for(let i = 0;i < ips.length; i++){
+          total += ips[i];
+        }
+        return total/ips.length;
+      }
+    }
+
+    console.log(mahasiswa.IPKumulatif());
+    console.log(Object.keys(mahasiswa));
+    // keys dari objectnya
+    console.log(Object.values(mahasiswa));
+    // values dari keynya
+    console.log(Object.entries(mahasiswa));
+    // entries semua isi dari object
+
+
+    const arr = [2,4,6];
+    arr.push(arr.push(arr.pop()));
+    // Hasilnya [2,4,6,3]
+    // arr.push mengembalikan length array
+    console.log(arr);
+  </script>
+</body>
+</html>

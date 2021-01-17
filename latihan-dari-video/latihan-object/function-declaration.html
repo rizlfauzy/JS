@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Declaration</title>
+</head>
+
+<body>
+  <p>Membuat Object dengan Function</p>
+  <script>
+    function objectSiswa(nama, umur, kelas, jurusan) {
+      let siswa = {};
+      siswa.nama = nama;
+      siswa.umur = umur;
+      siswa.kelas = kelas;
+      siswa.jurusan = jurusan;
+      return siswa;
+    }
+
+    let nama = prompt("Masukkan nama anda : ");
+    let umur = parseInt(prompt("Masukkan umur anda : "));
+    let kelas = parseInt(prompt("Masukkan Kelas anda :"));
+    let jurusan = prompt("Nama Jurusan anda : ")
+
+    console.log(objectSiswa(nama, umur, kelas, jurusan));
+    // console.log(objectSiswa("Rizal Fauzi",18,13,"SIJA"));
+  </script>
+</body>
+
+</html>
