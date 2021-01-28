@@ -3,6 +3,7 @@ close.forEach((element) => {
   element.addEventListener('click',(e) => {
     // element.parentElement.parentElement.removeChild(element.parentElement);
     e.target.parentElement.style.display = 'none';
+    console.log(e);
     // parameter e di function berfungsi sebagi objek
     // yang mengembalikan apa yang sedang dikerjakan
     // dan e.target mengembalikan element close
