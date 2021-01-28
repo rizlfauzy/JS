@@ -3,11 +3,10 @@ close.forEach((element) => {
   element.addEventListener('click',(e) => {
     // element.parentElement.parentElement.removeChild(element.parentElement);
     e.target.parentElement.style.display = 'none';
-    console.log(e);
     // parameter e di function berfungsi sebagi objek
     // yang mengembalikan apa yang sedang dikerjakan
     // dan e.target mengembalikan element close
-
+    
     // DOM Traversal ada beberapa yaitu
     // parentElement = mengembalikan element
     // parentNode = Mengembalikan node bisa berupa apa saja
@@ -15,5 +14,8 @@ close.forEach((element) => {
     // nextElementSibling = mengembalikan element saudarannya dibawah
     // previousSibling = mengembalikan node saudaranya diatas
     // previousElementSibling = mengembalikan element saudaranya diatas
+
+    // preventDefault() adalah method yang berfungsi untuk mencegah aksi defaultnya
+    e.preventDefault();
   })
 })
