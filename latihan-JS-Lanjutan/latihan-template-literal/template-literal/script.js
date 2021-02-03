@@ -13,12 +13,14 @@ const students = [
   }
 ];
 
-const el1 = `<div class="container">
+const el1 = /*html*/`
+  <div class="container">
       ${students.map(student => `<ul>
         <li>Nama : ${student.nama}</li>
         <li>Email : ${student.email}</li>
       </ul>`).join(``)}
-  </div>`;
+  </div>
+  `;
 
 const songs = [
   {
@@ -53,16 +55,17 @@ const mapels = {
   ]
 };
 
-const el3 = `<div class="siswa">
+const el3 = /*html*/`
+<div class="siswa">
   <h3>${mapels.nama}</h3>
   <span class="smster">Semester :${mapels.semester}</span>
   <h4>Mata Kuliah :</h4>
   <ol>
     ${mapels.mPelajaran.map(mapel =>
-      `<li>${mapel}</li>`
-      ).join(``)}
+  `<li>${mapel}</li>`).join(``)}
   </ol>
-</div>`
+</div>
+`;
 
 document.body.innerHTML = `${el1}  ${el2} ${el3}`;
 
