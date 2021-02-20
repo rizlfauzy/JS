@@ -3,7 +3,7 @@ const jumbo = document.querySelector('.jumbo');
 const thumbs = document.querySelectorAll('.thumb');
 
 container.addEventListener('click', (e) => {
-  if (e.target.className == 'thumb') {
+  if (e.target.classList.contains(`thumb`)) {
     // const imgThumb = e.target.getAttribute('src')
     // jumbo.setAttribute('src',imgThumb)
     jumbo.src = e.target.src;

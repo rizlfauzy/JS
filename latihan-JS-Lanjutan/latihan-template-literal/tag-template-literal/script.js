@@ -6,18 +6,18 @@
 
 
 // function coba(strings, ...values) {
-//   // untuk mengambil semua argumen menggunakan
-//   // ...values
-//   // let result = ``;
-//   // strings.forEach((string,i) => {
-//   //   result += `${string}${values[i] || ``}`
-//   //   // `${string}${values[i] || ``}`
-//   //   // sama saja dengan fungsi ternary
-//   //   // `${string}${values[i] ? values[i] : `}`
-//   // });
-//   // return result
+  // untuk mengambil semua argumen menggunakan
+  // ...values
+  // let result = ``;
+  // strings.forEach((string,i) => {
+  //   result += `${string}${values[i] || ``}`
+    // `${string}${values[i] || ``}`
+    // sama saja dengan fungsi ternary
+    // `${string}${values[i] ? values[i] : `}`
+  // });
+  // return result
 
-//   // Cara Panjang
+  // Cara Panjang
 
 //   return strings.reduce((result, string, i) =>  `${result}${string}${values[i] || ``}`,``)
 // }
