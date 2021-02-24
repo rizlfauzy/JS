@@ -36,8 +36,11 @@ container.addEventListener(`click`, async function (e) {
 function getMovies(isi) {
   return fetch(`http://www.omdbapi.com/?apikey=515b0ae4&s=${isi}`)
     .then(response => {
-      
-      return console.log(response);
+      if (!response.ok) {
+        // melempar error ke catch()
+        throw new Error(response.statusText);
+      }
+      return response.json();
     })
     .then(response => {
       if (response.Response === `False`) {

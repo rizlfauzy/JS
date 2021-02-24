@@ -16,7 +16,7 @@ function getDataSiswa(url, success, error) {
 console.log(`mulai`);
 getDataSiswa(`data/siswa.json`, (result) => {
   const siswa = JSON.parse(result);
-  cl
+  
   siswa.forEach(swa => {
     console.log(swa.nama);
     console.log(swa.email);

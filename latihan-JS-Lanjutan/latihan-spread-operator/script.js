@@ -18,7 +18,7 @@ console.log(swa);
 
 const nama = document.querySelector('.nama');
 const huruf = [...nama.textContent];
-const nm = huruf.map(n => `<span>${n}</span>`).join(``);
+const nm = huruf.map(n => `<span>${n}</span>`).join(` `);
 
 nama.innerHTML = nm;
 

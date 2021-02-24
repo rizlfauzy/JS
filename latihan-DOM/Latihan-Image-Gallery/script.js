@@ -13,6 +13,7 @@ container.addEventListener('click', (e) => {
     }, 500);
     thumbs.forEach((thumb) => {
       thumb.className = 'thumb';
+      // setiap ditekan akan menciptan class yang namanya thumb
     });
     e.target.classList.add('active');
   }
