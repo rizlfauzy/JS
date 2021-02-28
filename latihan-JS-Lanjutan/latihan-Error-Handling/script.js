@@ -9,6 +9,7 @@ button.addEventListener(`click`, async function () {
   try {
     const movies = await getMovies(input.value);
     updateUI(movies);
+    input.value = ``;
   } catch (err) {
     const isiAlert = /*html*/`
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -19,6 +20,24 @@ button.addEventListener(`click`, async function () {
     document.querySelector(`.alert-error`).innerHTML = isiAlert;
   }
 });
+
+input.addEventListener(`keyup`, async function (e) { 
+  if (e.code === `Enter`) {
+    try {
+    const movies = await getMovies(input.value);
+    updateUI(movies);
+    input.value = ``;
+  } catch (err) {
+    const isiAlert = /*html*/`
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      ${err}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    `;
+    document.querySelector(`.alert-error`).innerHTML = isiAlert;
+  }
+  }
+ })
 
 // event binding = agar bisa memencet elemen yang bahkan belum dibuat
 const container = document.querySelector(`.container`);
@@ -58,9 +77,7 @@ function getDetail(data) {
       }
       return response.json();
     })
-    .then(result => {
-      return result;
-    });
+    .then(result => result);
 };
 
 function updateUI(movies) {
