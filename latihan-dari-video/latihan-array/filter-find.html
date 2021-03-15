@@ -23,7 +23,9 @@
       // karena angka 1 sudah diindexkan 0 dan hanya memunculkan yang sama dengan i
       // Maka saat ada angka 1 lagi yang indexnya beda, akan kalah dengan index yang sudah didefinisikan sebelumnya
     });
+    const uniqueArray = [...new Set(numbers)]
     console.log(removeDuplicates.join(" - "));
+    console.log(uniqueArray.join(` - `));
     // Untuk mengapus duplikat
 
     let angka3 = angka.sort(function(a,b){

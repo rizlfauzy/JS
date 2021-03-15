@@ -1,0 +1,61 @@
+h1, h2{
+  font-size: 100px;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+}
+
+html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button{
+  display: block;
+  margin: auto;
+}
+
+.container{
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/palu-1-transpared.png), auto;
+}
+
+.container:active{
+  cursor: url(../img/palu-2-transpared.png), auto;
+}
+
+.hole{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.hole::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/hole.png) bottom center no-repeat;
+  position: absolute;
+  bottom: -30px;
+  background-size: 80%;
+}
+
+.mole{
+  width: 100%;
+  height: 100%;
+  background: url(../img/mole.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  z-index: 1;
+  top: 190px;
+  transition: all .3s;
+}
+
+.hole.up .mole{
+  top: 0;
+}
